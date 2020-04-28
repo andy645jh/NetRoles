@@ -32,12 +32,16 @@ export class RoleService {
 
   addRole(role: Role): Observable<any> {
     console.log(role);
-    return this.http
-      .post<any>(this.endpoint, JSON.stringify(role), this.httpOptions)
-      .pipe(
-        tap(()=> console.log('added role')),
-        catchError(this.handleError<any>('addRole'))
-      );
+    return this.http.post<any>(this.endpoint, JSON.stringify(role), this.httpOptions);
+  }
+
+  removeRole(id: number): Observable<any> {    
+    return this.http.delete<any>(this.endpoint + "/" + id);
+  }
+
+  updateRole(role: Role): Observable<any> {   
+    console.log("Role Update: ", role); 
+    return this.http.put<any>(this.endpoint + "/" + role.id, JSON.stringify(role), this.httpOptions);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
