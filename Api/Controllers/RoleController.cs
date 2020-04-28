@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NetMysql.Models;
 
@@ -9,7 +10,7 @@ namespace NetMysql.Controllers
     {
         private BdRolesContext _bdRolesContext = new BdRolesContext();
         
-        [HttpGet]
+        [HttpGet] 
         public IActionResult Get()
         {
             return Ok(_bdRolesContext.Role);

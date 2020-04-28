@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ay5i2gyVNnzbljvvaa7Jbxy1GnWOMOt/IoYeXr3aLy7AeqdwGjSQKORqDMVJ1cu622ba0HcDihKjXmgYG6mr7A==",
+  "dgSpecHash": "I6HlNEul8SEKFTGYl148ZqRhnIByOF+GRsf2pq+ek+hOWYkF9Mq2va3aLN3/079mBm+EvhOgqxY1kHmr64bt3w==",
   "success": true,
-  "projectFilePath": "D:\\Repositorios\\NetMysql\\NetMysql.csproj",
+  "projectFilePath": "D:\\Repositorios\\NetRoles\\Api\\NetMysql.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Elkin\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Elkin\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

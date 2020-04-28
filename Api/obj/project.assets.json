@@ -8374,6 +8374,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.AspNetCore.Server.Kestrel >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
@@ -8386,11 +8387,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositorios\\NetMysql\\NetMysql.csproj",
+      "projectUniqueName": "D:\\Repositorios\\NetRoles\\Api\\NetMysql.csproj",
       "projectName": "NetMysql",
-      "projectPath": "D:\\Repositorios\\NetMysql\\NetMysql.csproj",
+      "projectPath": "D:\\Repositorios\\NetRoles\\Api\\NetMysql.csproj",
       "packagesPath": "C:\\Users\\Elkin\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositorios\\NetMysql\\obj\\",
+      "outputPath": "D:\\Repositorios\\NetRoles\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8415,6 +8416,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Cors": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
             "version": "[2.2.0, )"

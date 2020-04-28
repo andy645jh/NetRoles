@@ -25,6 +25,14 @@ namespace NetMysql
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                    builder.SetIsOriginAllowed(_ => true)                   
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddControllers();
         }
 
@@ -36,6 +44,13 @@ namespace NetMysql
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x =>
+            x.
+            AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            );
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -46,6 +61,7 @@ namespace NetMysql
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
