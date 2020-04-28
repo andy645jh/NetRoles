@@ -33,8 +33,13 @@ D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.d
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
@@ -46,8 +51,3 @@ D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dl
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\MySqlConnector.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
-D:\Repositorios\NetMysql\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
