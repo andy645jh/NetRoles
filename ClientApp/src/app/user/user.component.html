@@ -1,1 +1,29 @@
-<p>user works!</p>
+<h2>Users</h2>
+<form>
+    <input type="text" [(ngModel)]="user.name" placeholder="Name" [ngModelOptions]="{standalone: true}"/>
+    <select [(ngModel)]="user.roleId" [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let role of roles" [ngValue]="role.id">
+            {{role.name}}
+        </option>
+    </select>
+    <button (click)="onSave()">Save</button>
+    <button [hidden]="!isEditing" (click)='onCancelEdit()'>Cancel</button>
+</form>
+
+<table class="table b-1">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Role Id</th>
+        <th colspan="2">Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.roleId}}</td>
+            <td><button (click)='onEdit(u)'>Edit</button></td>
+            <td><button (click)='onRemove(u.id)'>Remove</button></td>
+        </tr>
+    </tbody>
+</table>
