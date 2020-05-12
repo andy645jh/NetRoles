@@ -104,3 +104,10 @@ D:\Repositorios\NetRoles\Api\obj\Debug\netcoreapp3.1\NetMysql.csproj.CopyComplet
 D:\Repositorios\NetRoles\Api\obj\Debug\netcoreapp3.1\NetMysql.dll
 D:\Repositorios\NetRoles\Api\obj\Debug\netcoreapp3.1\NetMysql.pdb
 D:\Repositorios\NetRoles\Api\obj\Debug\netcoreapp3.1\NetMysql.genruntimeconfig.cache
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Repositorios\NetRoles\Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

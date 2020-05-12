@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using NetMysql.Models;
 
 namespace NetMysql.Controllers
@@ -12,7 +13,7 @@ namespace NetMysql.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_bdRolesContext.User);
+            return Ok(_bdRolesContext.User.Include(u => u.Role));
         }
 
         [HttpPost]
@@ -22,8 +23,10 @@ namespace NetMysql.Controllers
             if(!this.ModelState.IsValid){
                 return BadRequest("Error de Model");
             }
-            /*var role = _bdRolesContext.Role.Find( user.RoleId );
-            user.Role = role;*/
+
+            var role = _bdRolesContext.Role.Find( user.RoleId );
+            user.Role = role;
+
             _bdRolesContext.User.Add(user);
             _bdRolesContext.SaveChanges();            
             return Ok(user);
@@ -50,7 +53,10 @@ namespace NetMysql.Controllers
                 return Ok("Salio vacio el id: "+id);
             }else{
                 up.Name = user.Name;  
-                up.RoleId = user.RoleId;              
+                var role = _bdRolesContext.Role.Find( user.RoleId );
+                up.Role = role;
+                up.RoleId = user.RoleId;     
+
                 _bdRolesContext.SaveChanges();
                 return Ok(up);
             }

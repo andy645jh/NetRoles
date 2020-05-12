@@ -1,6 +1,6 @@
 <h2>Roles</h2>
 <form>
-    <input type="text" [(ngModel)]="role.name" placeholder="Name" [ngModelOptions]="{standalone: true}"/>
+    <input type="text" [(ngModel)]="role.name" placeholder="Names" [ngModelOptions]="{standalone: true}"/>
     <button (click)="onSave()">Save</button>
     <button [hidden]="!isEditing" (click)='onCancelEdit()'>Cancel</button>
 </form>

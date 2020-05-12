@@ -8,13 +8,17 @@ import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { RoleComponent } from './role/role.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserComponent,
-    RoleComponent
+    RoleComponent,
+    HomeComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
