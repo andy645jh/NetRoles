@@ -12,4 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logOut()
+  {
+    console.log("Home Clear");
+    localStorage.clear();
+  }
 }

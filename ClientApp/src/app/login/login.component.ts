@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Login } from '../models/Login';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login: Login = new Login();
 
-  ngOnInit(): void {
+  constructor(private router:Router, public loginService: LoginService) { }
+
+  ngOnInit(): void { }
+
+  onSubmit()
+  {
+    this.loginService.login(this.login).subscribe(data => {
+      console.log("Data: ",data);
+      if(data.user.role.name=='Administrador')
+      {
+        console.log("Role: ",data.user.role.name);
+        localStorage.setItem("user",JSON.stringify(data.user));
+        this.router.navigate(['admin']); 
+      }      
+    });
   }
-
 }
