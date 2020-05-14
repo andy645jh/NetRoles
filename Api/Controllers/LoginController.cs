@@ -16,7 +16,7 @@ using NetMysql.Models;
 namespace NetMysql.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/")]
     public class LoginController : ControllerBase
     {
         private BdRolesContext _bdRolesContext = new BdRolesContext();
@@ -33,10 +33,10 @@ namespace NetMysql.Controllers
         public IActionResult Users()
         {
             return Ok(_bdRolesContext.User.Include(u => u.Role));
-        }
+        }        
 
         // POST: api/Login
-        [HttpPost]
+        [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] UserLogin user)
         {

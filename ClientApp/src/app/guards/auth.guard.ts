@@ -24,8 +24,13 @@ export class AuthGuard implements CanActivate {
     var user = JSON.parse(data);
     
     if(user != null)
-    {          
-      return user.role.name == role;  
+    {        
+      if(user.role.name == role){
+        return true;
+      }else{
+        this.router.navigate(['error']);
+      }  
+      
     }else{
       this.router.navigate(['login']);      
     }    

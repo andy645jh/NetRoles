@@ -10,6 +10,9 @@ import { RoleComponent } from './role/role.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { GuessComponent } from './guess/guess.component';
+import { ErrorComponent } from './error/error.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { AdminComponent } from './admin/admin.component';
     UserComponent,
     RoleComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    GuessComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { AdminComponent } from './admin/admin.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
