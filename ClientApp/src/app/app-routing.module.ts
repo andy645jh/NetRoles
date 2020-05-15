@@ -6,6 +6,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { GuessComponent } from './guess/guess.component';
 import { ErrorComponent } from './error/error.component';
+import { RoleComponent } from './role/role.component';
+import { UserComponent } from './user/user.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,22 @@ const routes: Routes = [
   { 
     path: 'admin', 
     component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: { 
+      expectedRole: 'Administrador'
+    }  
+  },  
+  { 
+    path: 'role', 
+    component: RoleComponent,
+    canActivate: [AuthGuard],
+    data: { 
+      expectedRole: 'Administrador'
+    }  
+  },
+  { 
+    path: 'user', 
+    component: UserComponent,
     canActivate: [AuthGuard],
     data: { 
       expectedRole: 'Administrador'

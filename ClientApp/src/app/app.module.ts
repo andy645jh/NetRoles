@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { GuessComponent } from './guess/guess.component';
 import { ErrorComponent } from './error/error.component';
 import { DataService } from './services/data.service';
+import { RoleDirective } from './directives/role.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DataService } from './services/data.service';
     HomeComponent,
     AdminComponent,
     GuessComponent,
-    ErrorComponent
+    ErrorComponent,
+    RoleDirective
   ],
   imports: [
     BrowserModule,

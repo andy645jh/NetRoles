@@ -20,16 +20,20 @@ export class LoginService
 
   role:Role;
 
-  constructor(private http: HttpClient, private dataService:DataService) {}
+  constructor(private http: HttpClient, private dataService:DataService) 
+  {
+    
+  }
 
   login(login: Login): Observable<any> {
     return this.http
       .post<any>(this.endpoint + "login", JSON.stringify(login), this.httpOptions)
       .pipe(
         map((data) => {
-          this.dataService.setLoginState(true);
+          
           localStorage.setItem("user", JSON.stringify(data.user));
           localStorage.setItem("token", JSON.stringify(data.token));
+          this.dataService.LoginState({user:data.user, token:data.token});
           return data;
         }),
         catchError((err) => {
@@ -41,7 +45,8 @@ export class LoginService
 
   logOut() 
   {
-    localStorage.clear();    
+    localStorage.clear(); 
+    this.dataService.LoginState({});       
   }
 
   isAdmin() : boolean

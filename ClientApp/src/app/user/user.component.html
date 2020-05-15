@@ -21,7 +21,7 @@
         <tr *ngFor="let u of users">
             <td>{{u.id}}</td>
             <td>{{u.name}}</td>
-            <td>{{u.roleId}}</td>
+            <td>{{u.role.name}}</td>
             <td><button (click)='onEdit(u)'>Edit</button></td>
             <td><button (click)='onRemove(u.id)'>Remove</button></td>
         </tr>

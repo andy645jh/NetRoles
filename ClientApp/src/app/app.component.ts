@@ -10,29 +10,19 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent implements OnInit
 {  
-  isLogin:boolean = false;
-  isAdmin:boolean = false;
    
   ngOnInit()
-  {    
-    this.isLogin = this.dataService.getLoginState();
-    console.log("ngOnInit", this.isLogin);
-
-    this.dataService.currentState.subscribe(newState => {
-      console.log("Cambio: "+this.isLogin);
-      this.isLogin = newState;
-    });
+  {     
   }
 
   constructor(private dataService:DataService, private router:Router, private loginService:LoginService)
   {    
-    
+    console.log("constructor App");
   }
 
   logOut()
   {
     this.loginService.logOut();
-    this.dataService.setLoginState(false);
     this.router.navigate(['/']);
   }
 }

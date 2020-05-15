@@ -6,13 +6,19 @@
       <a class="nav-link" [routerLink]="['/']">Home</a>
     </li>
     <li class="nav-item">
-      <a [hidden]="isLogin" class="nav-link" [routerLink]="['/login']">Login</a>
+      <a *appRole="['None']" class="nav-link" [routerLink]="['/login']">Login</a>
     </li>    
     <li class="nav-item">
-        <a [hidden]="!isLogin" class="nav-link" [routerLink]="['/']" (click)="logOut()">Log Out</a>
+        <a *appRole="['Administrador','Invitado']" class="nav-link" [routerLink]="['/']" (click)="logOut()">Log Out</a>
     </li>
     <li class="nav-item">
-        <a [hidden]="!isLogin" class="nav-link" [routerLink]="['roles']">Roles</a>
+        <a *appRole="['Administrador']" class="nav-link" [routerLink]="['role']">Roles</a>
+    </li>
+    <li class="nav-item">
+        <a *appRole="['Administrador']" class="nav-link" [routerLink]="['user']">Admin</a>
+    </li>
+    <li class="nav-item">
+        <a *appRole="['Invitado']" class="nav-link" [routerLink]="['guess']">Guess</a>
     </li>
   </ul>
 </nav>

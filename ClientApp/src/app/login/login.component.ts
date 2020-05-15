@@ -20,12 +20,20 @@ export class LoginComponent implements OnInit {
   {
     this.loginService.login(this.login).subscribe(data => {
       console.log("Data: ",data);
-      if(data.user.role.name=='Administrador')
+      switch(data.user.role.name)
       {
-        console.log("Role: ",data.user.role.name);
-        localStorage.setItem("user",JSON.stringify(data.user));
-        this.router.navigate(['admin']); 
-      }      
+        case 'Administrador':
+          this.router.navigate(['admin']); 
+        break;
+
+        case 'Invitado':
+          this.router.navigate(['guess']); 
+        break;
+
+        default:
+          this.router.navigate(['/']); 
+        break;
+      }         
     });
   }
 }
