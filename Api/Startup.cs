@@ -68,8 +68,11 @@ namespace NetMysql
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }else{
+                app.UseHsts();
             }
-
+            app.UseHttpsRedirection();
+            
             app.UseCors(x =>
             x.
             AllowAnyOrigin()
@@ -77,7 +80,7 @@ namespace NetMysql
             .AllowAnyMethod()
             );
 
-            app.UseHttpsRedirection();
+            
 
             app.UseRouting();
 
